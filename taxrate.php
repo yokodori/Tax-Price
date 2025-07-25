@@ -1,10 +1,9 @@
 <?php
-function taxrate_10($origin_price) {
-    return $origin_price * 0.1;
+function taxrate_10(int $origin_price): int {
+    return round($origin_price * 1.1);
 }
 
 $origin_price = 500;
 $include_tax = taxrate_10($origin_price);
-$paid_price = $include_tax;
 echo ("私は{$include_tax}円を支払います。");
 ?>
